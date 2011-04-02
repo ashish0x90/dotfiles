@@ -1,0 +1,12 @@
+This directory contains list of installed softwares, and corresponding repository details.
+
+
+-- Export installed software packages listing:
+ 1) dpkg --get-selections > software_packages/installed_softwares.list
+
+
+-- Install the software packages:
+ 1) Merge software_packages/sources.list with /etc/apt/sources.list
+ 2) sudo apt-get update
+ 3) dpkg --set-selections < software_packages/installed_softwares.list
+ 4) sudo apt-get -u dselect-upgrade
